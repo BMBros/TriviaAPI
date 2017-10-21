@@ -35,7 +35,7 @@ jobs:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: Test
-          command: gradlew test
+          command: gradle test
 #      - store_test_results:
 #          path: reports/junit
 #      - store_artifacts:
@@ -52,7 +52,7 @@ jobs:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - run:
           name: build
-          command: gradlew build -x test
+          command: gradle build -x test
 workflows:
   version: 2
   test_lint:
